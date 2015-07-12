@@ -16,6 +16,7 @@
 		48DE8A8F1B48C9EA00038185 /* ImageTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DE8A8E1B48C9EA00038185 /* ImageTableTests.swift */; };
 		48DE8A991B48CA2800038185 /* ImageTableListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DE8A981B48CA2800038185 /* ImageTableListViewController.swift */; };
 		48DE8A9B1B48CA4300038185 /* ImageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DE8A9A1B48CA4300038185 /* ImageTableViewController.swift */; };
+		48F72DFC1B52125600D0A86F /* ImageTableObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F72DFB1B52125600D0A86F /* ImageTableObjectView.swift */; };
 		C549CFBFB5200149E22841D4 /* Pods_ImageTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D61E193FABBD05B047FA7B /* Pods_ImageTable.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		48DE8A8E1B48C9EA00038185 /* ImageTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableTests.swift; sourceTree = "<group>"; };
 		48DE8A981B48CA2800038185 /* ImageTableListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableListViewController.swift; sourceTree = "<group>"; };
 		48DE8A9A1B48CA4300038185 /* ImageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewController.swift; sourceTree = "<group>"; };
+		48F72DFB1B52125600D0A86F /* ImageTableObjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableObjectView.swift; sourceTree = "<group>"; };
 		92D514FAC03BF98464EA4FBA /* Pods-ImageTable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageTable.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageTable/Pods-ImageTable.release.xcconfig"; sourceTree = "<group>"; };
 		92D61E193FABBD05B047FA7B /* Pods_ImageTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E10D5775483C8A7F433578C /* Pods-ImageTable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageTable.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageTable/Pods-ImageTable.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				48DE8A761B48C9EA00038185 /* Supporting Files */,
 				48DE8A981B48CA2800038185 /* ImageTableListViewController.swift */,
 				48DE8A9A1B48CA4300038185 /* ImageTableViewController.swift */,
+				48F72DFB1B52125600D0A86F /* ImageTableObjectView.swift */,
 				48B4D6461B493016003108EC /* ImageTable.swift */,
 			);
 			path = ImageTable;
@@ -300,6 +303,7 @@
 				48DE8A791B48C9EA00038185 /* AppDelegate.swift in Sources */,
 				48B4D6451B48F824003108EC /* ImageTableViewCell.swift in Sources */,
 				48DE8A991B48CA2800038185 /* ImageTableListViewController.swift in Sources */,
+				48F72DFC1B52125600D0A86F /* ImageTableObjectView.swift in Sources */,
 				48DE8A9B1B48CA4300038185 /* ImageTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,6 +13,8 @@ import RealmSwift
 class ImageTable: Object {
   dynamic var title = ""
   dynamic var headerData:NSData = NSData()
+  dynamic var headerObjects = List<ImageTableObject>()
+  dynamic var footerObjects = List<ImageTableObject>()
   dynamic var footerData:NSData = NSData()
   dynamic var headerImage:UIImage! {
     get {
@@ -71,14 +73,14 @@ class ImageTableCell: Object {
     }
   }
   
-  var objects = List<ImageTableCellObject>()
+  var objects = List<ImageTableObject>()
   
   override static func ignoredProperties() -> [String] {
     return ["backgroundImage"]
   }
 }
 
-class ImageTableCellObject: Object {
+class ImageTableObject: Object {
   dynamic var backgroundData = NSData()
   dynamic var scale:Float = 1.0
   dynamic var centerX:Float = 0

@@ -10,4 +10,14 @@ import UIKit
 
 class ImageTableViewCell : UITableViewCell {
   @IBOutlet var cellImageView:UIImageView!
+  var longPresGesture:UILongPressGestureRecognizer! {
+    willSet(newGesture) {
+      if let oldGesture = longPresGesture {
+        self.removeGestureRecognizer(longPresGesture)
+      }
+    }
+    didSet {
+      self.addGestureRecognizer(longPresGesture)
+    }
+  }
 }
