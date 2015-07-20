@@ -91,8 +91,7 @@ class ImageTableObjectView: UIView {
           center.y = CGRectGetHeight(self.frame) / 2
         }
 
-        var realm = Realm()
-        realm.write {
+        object?.realm?.write {
           self.object?.center = center
         }
       }
@@ -138,8 +137,7 @@ class ImageTableObjectView: UIView {
       }
       
       
-      var realm = Realm()
-      realm.write {
+      object?.realm?.write {
         self.object!.scale = Float(self.frame.width) / Float(self.object!.backgroundImage.size.width)
         self.object!.center = self.center
       }

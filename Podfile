@@ -3,6 +3,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'ImageTable' do
+  pod 'TWMessageBarManager'
   pod 'Realm'
   pod 'RealmSwift'
 end
@@ -10,4 +11,3 @@ end
 target 'ImageTableTests' do
 
 end
-

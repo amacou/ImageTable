@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48391E811B5B54600073C12D /* ImageTableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48391E801B5B545F0073C12D /* ImageTableManager.swift */; };
 		48B4D6451B48F824003108EC /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B4D6441B48F824003108EC /* ImageTableViewCell.swift */; };
 		48B4D6471B493016003108EC /* ImageTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B4D6461B493016003108EC /* ImageTable.swift */; };
 		48DE8A791B48C9EA00038185 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DE8A781B48C9EA00038185 /* AppDelegate.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		48391E801B5B545F0073C12D /* ImageTableManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableManager.swift; sourceTree = "<group>"; };
 		48B4D6441B48F824003108EC /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		48B4D6461B493016003108EC /* ImageTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTable.swift; sourceTree = "<group>"; };
 		48DE8A731B48C9EA00038185 /* ImageTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +105,7 @@
 			children = (
 				48B4D6441B48F824003108EC /* ImageTableViewCell.swift */,
 				48DE8A781B48C9EA00038185 /* AppDelegate.swift */,
+				48391E801B5B545F0073C12D /* ImageTableManager.swift */,
 				48DE8A7C1B48C9EA00038185 /* Main.storyboard */,
 				48DE8A7F1B48C9EA00038185 /* Images.xcassets */,
 				48DE8A811B48C9EA00038185 /* LaunchScreen.xib */,
@@ -301,6 +304,7 @@
 			files = (
 				48B4D6471B493016003108EC /* ImageTable.swift in Sources */,
 				48DE8A791B48C9EA00038185 /* AppDelegate.swift in Sources */,
+				48391E811B5B54600073C12D /* ImageTableManager.swift in Sources */,
 				48B4D6451B48F824003108EC /* ImageTableViewCell.swift in Sources */,
 				48DE8A991B48CA2800038185 /* ImageTableListViewController.swift in Sources */,
 				48F72DFC1B52125600D0A86F /* ImageTableObjectView.swift in Sources */,

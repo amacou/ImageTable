@@ -110,6 +110,7 @@
                             <outletCollection property="gestureRecognizers" destination="jTN-if-AoT" appends="YES" id="Zvc-je-eV5"/>
                         </connections>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="pqy-U9-6ab" id="mza-Iy-bku"/>
                     </connections>

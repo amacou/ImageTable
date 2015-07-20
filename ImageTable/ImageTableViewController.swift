@@ -131,9 +131,9 @@ class ImageTableViewController: UIViewController, UITableViewDelegate, UITableVi
     let action = UIAlertAction(title: "このパーツを削除", style: UIAlertActionStyle.Destructive) { (action) -> Void in
       if let view = sender.view as? ImageTableObjectView {
         view.removeFromSuperview()
-        let realm = Realm()
-        realm.write {
-          realm.delete(view.object!)
+        let realm = self.imageTable.realm
+        realm?.write {
+          realm?.delete(view.object!)
         }
         self.tableView.reloadData()
       }
@@ -181,10 +181,10 @@ class ImageTableViewController: UIViewController, UITableViewDelegate, UITableVi
       if let view = sender.view {
         let indexPath = self.tableView.indexPathForCell(view as! UITableViewCell)
         let cell = self.imageTable.cells[indexPath!.row]
-        let realm = Realm()
-        realm.write {
+        let realm = self.imageTable.realm
+        realm?.write {
           cell.objects.removeAll()
-          realm.delete(cell)
+          realm?.delete(cell)
         }
         self.tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation:UITableViewRowAnimation.Automatic)
       }
@@ -208,7 +208,7 @@ class ImageTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     if self.imageTable.headerImage != nil {
       alert.addAction(UIAlertAction(title: "ヘッダーを削除", style: UIAlertActionStyle.Destructive) { (action) -> Void in
-        Realm().write {
+        self.imageTable.realm?.write {
           self.imageTable.headerImage = nil;
           self.imageTable.headerObjects.removeAll()
         }
@@ -223,7 +223,7 @@ class ImageTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     if self.imageTable.footerImage != nil {
       alert.addAction(UIAlertAction(title: "フッターを削除", style: UIAlertActionStyle.Destructive) { (action) -> Void in
-        Realm().write {
+        self.imageTable.realm?.write {
           self.imageTable.footerImage = nil
           self.imageTable.footerObjects.removeAll()
         }
@@ -260,19 +260,20 @@ class ImageTableViewController: UIViewController, UITableViewDelegate, UITableVi
   func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
     var obj: AnyObject?  = info[UIImagePickerControllerOriginalImage]
 
-    var realm = Realm()
-
-    realm.write {
+    self.imageTable.realm?.write {
       if let image = obj as! UIImage! {
         switch self.imageAppendMode {
         case ImageAppendMode.header:
           self.imageTable.headerImage = image
+          
         case ImageAppendMode.footer:
           self.imageTable.footerImage = image
+          
         case ImageAppendMode.body:
           let imageTableCell = ImageTableCell()
           imageTableCell.backgroundImage = image
           self.imageTable.cells.append(imageTableCell)
+          
         case ImageAppendMode.headerObject:
           let object = ImageTableObject()
           object.backgroundImage = image
@@ -293,6 +294,7 @@ class ImageTableViewController: UIViewController, UITableViewDelegate, UITableVi
           }
           object.scale = scale
           self.imageTable.headerObjects.append(object)
+          
         case ImageAppendMode.footerObject:
           let object = ImageTableObject()
           object.backgroundImage = image
